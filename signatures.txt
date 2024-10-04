@@ -1,0 +1,46 @@
+#light
+
+
+
+namespace FSharp
+
+namespace ImageLibrary
+    
+    module Operations =
+        
+        val clamp: value: int -> int
+        
+        val applySepiaToPixel: r: int * g: int * b: int -> int * int * int
+        
+        val Sepia:
+          width: int ->
+            height: int ->
+            depth: int ->
+            image: (int * int * int) list list -> (int * int * int) list list
+        
+        val IncreaseIntensity:
+          width: int ->
+            height: int ->
+            depth: int ->
+            image: (int * int * int) list list ->
+            intensity: double -> channel: char -> (int * int * int) list list
+        
+        val FlipHorizontal:
+          width: int ->
+            height: int ->
+            depth: int ->
+            image: (int * int * int) list list -> (int * int * int) list list
+        
+        val Rotate180:
+          width: int ->
+            height: int ->
+            depth: int ->
+            image: (int * int * int) list list -> (int * int * int) list list
+        
+        val EdgeDetect:
+          width: int ->
+            height: int ->
+            depth: int ->
+            image: (int * int * int) list list ->
+            threshold: int -> (int * int * int) list list
+
